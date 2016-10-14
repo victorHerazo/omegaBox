@@ -27,9 +27,10 @@ public class Menu extends javax.swing.JFrame {
         rutaICO = "C:\\Users\\victor\\Documents\\NetBeansProjects\\OmegaBox\\src\\recursos\\IMG\\power.png";
         ImageIcon img = new ImageIcon(rutaICO);
         jLpower.setIcon(new ImageIcon(img.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH)));
+       consultarProductos();
        
     }
-
+    
     public void consultarProductos() {
         Con_Productos forma = new Con_Productos();
         ArrayList listaforma = new ArrayList();
@@ -54,7 +55,6 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jPanelFondo = new javax.swing.JPanel();
         PanelCompleto = new javax.swing.JTabbedPane();
         jPanelInicio = new javax.swing.JPanel();
         jPanelEmpleados = new javax.swing.JPanel();
@@ -76,6 +76,8 @@ public class Menu extends javax.swing.JFrame {
         jPanelConfiguracion = new javax.swing.JPanel();
         jLpower = new javax.swing.JLabel();
         jLabelFondo = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
 
         jLabel2.setText("jLabel2");
 
@@ -83,8 +85,6 @@ public class Menu extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanelFondo.setBackground(new java.awt.Color(255, 0, 0));
 
         PanelCompleto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -96,7 +96,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelInicio.setLayout(jPanelInicioLayout);
         jPanelInicioLayout.setHorizontalGroup(
             jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 812, Short.MAX_VALUE)
+            .addGap(0, 875, Short.MAX_VALUE)
         );
         jPanelInicioLayout.setVerticalGroup(
             jPanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +109,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelEmpleados.setLayout(jPanelEmpleadosLayout);
         jPanelEmpleadosLayout.setHorizontalGroup(
             jPanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 812, Short.MAX_VALUE)
+            .addGap(0, 875, Short.MAX_VALUE)
         );
         jPanelEmpleadosLayout.setVerticalGroup(
             jPanelEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,7 +130,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelVentasLayout.setHorizontalGroup(
             jPanelVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelVentasLayout.createSequentialGroup()
-                .addContainerGap(699, Short.MAX_VALUE)
+                .addContainerGap(762, Short.MAX_VALUE)
                 .addComponent(btnInicio)
                 .addGap(40, 40, 40))
         );
@@ -245,7 +245,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelProductosLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 769, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(23, Short.MAX_VALUE))
+                        .addContainerGap(86, Short.MAX_VALUE))
                     .addGroup(jPanelProductosLayout.createSequentialGroup()
                         .addGroup(jPanelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -301,7 +301,7 @@ public class Menu extends javax.swing.JFrame {
         jPanelReportes.setLayout(jPanelReportesLayout);
         jPanelReportesLayout.setHorizontalGroup(
             jPanelReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 812, Short.MAX_VALUE)
+            .addGap(0, 875, Short.MAX_VALUE)
         );
         jPanelReportesLayout.setVerticalGroup(
             jPanelReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,11 +310,13 @@ public class Menu extends javax.swing.JFrame {
 
         PanelCompleto.addTab("REPORTES", jPanelReportes);
 
+        jPanelConfiguracion.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanelConfiguracionLayout = new javax.swing.GroupLayout(jPanelConfiguracion);
         jPanelConfiguracion.setLayout(jPanelConfiguracionLayout);
         jPanelConfiguracionLayout.setHorizontalGroup(
             jPanelConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 812, Short.MAX_VALUE)
+            .addGap(0, 875, Short.MAX_VALUE)
         );
         jPanelConfiguracionLayout.setVerticalGroup(
             jPanelConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,61 +325,39 @@ public class Menu extends javax.swing.JFrame {
 
         PanelCompleto.addTab("CONFIGURACION", jPanelConfiguracion);
 
-        javax.swing.GroupLayout jPanelFondoLayout = new javax.swing.GroupLayout(jPanelFondo);
-        jPanelFondo.setLayout(jPanelFondoLayout);
-        jPanelFondoLayout.setHorizontalGroup(
-            jPanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFondoLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(PanelCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 817, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLpower, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
-        );
-        jPanelFondoLayout.setVerticalGroup(
-            jPanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFondoLayout.createSequentialGroup()
-                .addGroup(jPanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelFondoLayout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(jLpower, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelFondoLayout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(PanelCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(PanelCompleto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, -1));
+        getContentPane().add(jLpower, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 50, 110, 70));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/IMG/fondo-2560x1080.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jScrollPane2.setViewportView(jEditorPane1);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 200, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
-        PanelCompleto.setSelectedIndex(0);
-    }//GEN-LAST:event_btnInicioActionPerformed
-
     private void PanelCompletoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelCompletoMouseClicked
-        
-
-//        
 
     }//GEN-LAST:event_PanelCompletoMouseClicked
+
+    private void jPanelProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelProductosMouseClicked
+        
+        //        OcultoCrear(f);
+    }//GEN-LAST:event_jPanelProductosMouseClicked
 
     private void btnGuardarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarProductoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGuardarProductoActionPerformed
 
     private void btnCrearProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearProductoActionPerformed
-//        OcultoCrear(v);
+        //        OcultoCrear(v);
     }//GEN-LAST:event_btnCrearProductoActionPerformed
 
-    private void jPanelProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelProductosMouseClicked
-        consultarProductos();
-//        OcultoCrear(f);
-    }//GEN-LAST:event_jPanelProductosMouseClicked
+    private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
+        PanelCompleto.setSelectedIndex(0);
+    }//GEN-LAST:event_btnInicioActionPerformed
 
 //     public void OcultoCrear(vof){
 //         jLabelNombre.setVisible(vof);   
@@ -431,6 +411,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardarProducto;
     private javax.swing.JButton btnInicio;
     private javax.swing.JButton jButton2;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelDescripcion;
     private javax.swing.JLabel jLabelFondo;
@@ -438,13 +419,13 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLpower;
     private javax.swing.JPanel jPanelConfiguracion;
     private javax.swing.JPanel jPanelEmpleados;
-    private javax.swing.JPanel jPanelFondo;
     private javax.swing.JPanel jPanelInicio;
     private javax.swing.JPanel jPanelProductos;
     private javax.swing.JPanel jPanelReportes;
     private javax.swing.JPanel jPanelVentas;
     private javax.swing.JScrollPane jScrollDescripcion;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTableProductos;
     private javax.swing.JTextArea jTextDescripcion;
     private javax.swing.JTextField jTextNombre;
