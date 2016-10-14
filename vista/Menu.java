@@ -27,6 +27,7 @@ public class Menu extends javax.swing.JFrame {
         rutaICO = "C:\\Users\\victor\\Documents\\NetBeansProjects\\OmegaBox\\src\\recursos\\IMG\\power.png";
         ImageIcon img = new ImageIcon(rutaICO);
         jLpower.setIcon(new ImageIcon(img.getImage().getScaledInstance(100, 100, Image.SCALE_SMOOTH)));
+       
     }
 
     public void consultarProductos() {
